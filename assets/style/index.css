@@ -22,7 +22,10 @@
 
 body {
   background-color: rgb(241, 241, 245);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+main, header {
+  font-family: "Rajdhani", sans-serif;
 }
 
 .flex {
@@ -38,13 +41,16 @@ body {
   grid-template-columns: auto auto auto;
 }
 
+.r-position {position: relative;}
+.a-position {position: absolute;}
+
 /*-------HEADER--------*/
 
 header {
   background-color: #fff;
   line-height: 60px;
   color: var(--secondary-color);
-  border-bottom: 1px solid #000;
+  border-bottom: 2px solid var(--secondary-color);
 }
 
 h1 {
@@ -76,30 +82,39 @@ header li a:hover:after {
 /*----INTRODUCTION----*/
 
 .intro {
-  position: relative;
-  background-image: linear-gradient(to bottom, #fff, rgba(20, 33, 61, 0.1));
+  height: calc(100vh - 60px);
 }
 
 .intro div {
   padding: 20px;
+  z-index: 2;
 }
 
 .intro p {
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--secondary-color);
-}
-
-.intro .about p {
-  color:rgba(20, 33, 61, 0.6);
 }
 
 .intro .name p {
   color: var(--primary-color);
 }
 
+svg {
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+path {
+  fill: rgba(135, 148, 176, 0.3);
+  opacity: 0.5;
+}
+
+
 h3 {
-  position: relative;
   font-size: 50px;
   height: 120px;
   width: 210px;
@@ -114,20 +129,13 @@ h3:after {
   border-bottom: 5px solid var(--primary-color);
 }
 
-.icons {
-  margin-top: 50px;
-  padding: 0;
-  position: absolute;
-  bottom: 20px;
-}
-
 .icons li {
   font-size: 30px;
 }
 
 .box, .profile {
-  height: 300px;
-  width: 300px;
+  width: 400px;
+  aspect-ratio: 1/1;
 }
 
 .profile {
@@ -148,7 +156,7 @@ h4 {
 }
 
 button {
-  padding: 5px 20px;
+  padding: 5px 25px;
   margin-top: 20px;
   color: var(--primary-color);
   cursor: pointer;
@@ -166,10 +174,12 @@ button {
 
 /*-----MORE-----*/
 
-.about-me {
-  height: 300px;
+
+.about-me  {
   background-color: #8794b0;
 }
+
+
 
 /*
 
