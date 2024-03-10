@@ -21,7 +21,8 @@
 }
 
 body {
-  background-color: rgb(241, 241, 245);
+  background-color: rgb(41, 41, 45);
+  color: #fff;
 }
 
 main, header {
@@ -36,9 +37,10 @@ main, header {
   gap: 20px;
 }
 
-.three-section {
-  display: grid;
-  grid-template-columns: auto auto auto;
+.two-box {
+  position: relative;
+  flex: 0 0 calc(50% - 10px);
+  max-width: calc(50% - 10px);
 }
 
 .r-position {position: relative;}
@@ -46,11 +48,8 @@ main, header {
 
 /*-------HEADER--------*/
 
-header {
-  background-color: #fff;
+header{
   line-height: 60px;
-  color: var(--secondary-color);
-  border-bottom: 2px solid var(--secondary-color);
 }
 
 h1 {
@@ -60,19 +59,16 @@ h1 {
 header li a  {
   position: relative;
   text-decoration: none;
-  color: black;
 }
 
 li {
   list-style: none;
-  color: var(--secondary-color);
   font-size: 20px;
-  display: flex;
 }
 
 header li a:hover:after {
   position: absolute;
-  bottom: 10px;
+  bottom: 0px;
   content: ""; 
   display: block;
   width: 50%; 
@@ -82,12 +78,8 @@ header li a:hover:after {
 /*----INTRODUCTION----*/
 
 .intro {
-  height: calc(100vh - 60px);
-}
-
-.intro div {
-  padding: 20px;
   z-index: 2;
+  padding: 20px 0;
 }
 
 .intro p {
@@ -109,24 +101,45 @@ svg {
 }
 
 path {
-  fill: rgba(135, 148, 176, 0.3);
+  fill: rgba(255, 255, 255, 0.3);
   opacity: 0.5;
 }
 
 
-h3 {
-  font-size: 50px;
-  height: 120px;
-  width: 210px;
-  line-height: 60px;
+h2 {
+  font-size: 100px;
+  font-weight: 600;
+  line-height: 100px;
 }
 
-h3:after {
-  bottom: 10px;
+h2:after {
+  position: absolute;
+  bottom: 0px;
   content: "";
   display: block;
   width: 20%; 
   border-bottom: 5px solid var(--primary-color);
+}
+
+div h3 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.skill div {
+  padding: 5px 25px;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+.html {background-color: #f46036;}
+.css {background-color: #4585e5;}
+.js {background-color: #FA8C45;}
+
+.icons {
+  position: absolute;
+  bottom: 0px;
 }
 
 .icons li {
@@ -134,9 +147,10 @@ h3:after {
 }
 
 .box, .profile {
-  width: 400px;
+  width: 100%;
   aspect-ratio: 1/1;
 }
+
 
 .profile {
   position: absolute;
@@ -151,28 +165,34 @@ h3:after {
   border: 2px solid var(--primary-color);
 }
 
-h4 {
+h3 {
   font-size: 30px;
 }
 
 button {
   padding: 5px 25px;
   margin-top: 20px;
-  color: var(--primary-color);
   cursor: pointer;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   transition: var(--transition);
-}
-
-.contact {border: 2px solid var(--primary-color);}
-
-.contact:hover {
-  background-color: var(--primary-color);
+  background-color: rgb(41, 41, 45);
   color: #fff;
 }
 
+.contact {
+  border: 2px solid var(--primary-color); 
+  height: 30px; 
+  line-height: 0px;
+}
 
-/*-----MORE-----*/
+.contact:hover {
+  background-color: var(--primary-color);
+}
+
+
+/*-----PROJECTS-----*/
+
+
 
 
 
