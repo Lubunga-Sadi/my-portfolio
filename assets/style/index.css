@@ -52,9 +52,7 @@ section {
   max-width: calc(50% - 10px);
 }
 
-p:not(.intro p, footer p) {
-  font-size: 20px;
-}
+
 
 /*-------HEADER--------*/
 
@@ -177,6 +175,7 @@ h3 {
 
 .about-me p {
   margin-top: 20px;
+  font-size: 20px;
 }
 
 h4, h5 {
@@ -269,7 +268,8 @@ footer {
 
 @media (max-width: 480px) {
   .contact p {
-    font-size: 5px;
+    padding: 20px 0px;
+    font-size: 15px;
   }
   
 }
