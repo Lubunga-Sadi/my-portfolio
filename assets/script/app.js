@@ -1,8 +1,5 @@
 'use strict'
 
-import * as utils from './utils.js';
-
-
 window.addEventListener('load', () => {
   const sr = ScrollReveal();
 
@@ -15,18 +12,6 @@ window.addEventListener('load', () => {
   sr.reveal('.contact', revealOptions);
 });
 
-/*
-const positionChange = utils.select('.shift')
-
-window.addEventListener('load', () => {
-  positionChange.style.position = 'relative';
-  positionChange.style.top = '200px'; 
-
-  setTimeout(() => {
-    positionChange.classList.add('transition');
-    positionChange.style.top = '0px'; 
-  }, 100);
-})*/
 
 
 
