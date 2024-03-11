@@ -6,7 +6,7 @@
     <meta name="author" content="sadi">
     <meta name="description" content="portfolio">
     <meta name="keywords" content="html, css, web development, javascript">
-    <title>Portfolio</title>
+    <title>practice</title>
     <link rel="icon" href="./assets/img/fav-img.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/style/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mrspecht/cdn/reset.css">
     <script src="./assets/script/app.js" type="module"></script>
+    <script src="https://unpkg.com/scrollreveal@4"></script>
   </head>
   <body>
     <header>
@@ -22,7 +23,7 @@
         <div class="space-between"> 
           <nav>
             <ul class="flex gap">
-              <li><a class="fa-solid fa-bars"></a></li>
+              <li><a class="fa-solid fa-bars bars"></a></li>
               <li><a>Home</a></li>
               <li><a>Resume</a></li>
               <li><a>Skills</a></li>
@@ -37,10 +38,10 @@
         </div>
       </div>
     </header>
-    <main class="fade-in">
+    <main>
       <section class="container intro">
         <div class="row">
-          <div class="column">
+          <div class="column fade-one" >
             
             <p>
               Hello, my name is
@@ -56,17 +57,17 @@
               <div class="js">JavaScript</div>
             </div>
           </div>
-          <div class="column picture">
+          <div class="column picture fade-two" >
             <div class="profile"></div>
           </div>
         </div>
       </section>
       <section class="about-me">
         <div class="row container">
-          <div class="column work-jpg">
+          <div class="column work-jpg fade-two">
             <div class="work-picture"></div>
           </div>
-          <div class="column">
+          <div class="column fade-one">
             <h4>About Me</h4>
             <p>
               I am a dedicated student pursuing a career in software development at MITT. 

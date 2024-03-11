@@ -5,6 +5,10 @@
   --transition: all .15s ease-in-out;
 }
 
+.transition {
+  transition: opacity 40s ease-in;
+}
+
 .container {
   width: min(100% - 30px, 1080px);
   margin-inline: auto;
@@ -20,7 +24,6 @@
 }
 
 body {
-  position: absolute;
   background-color: #29292d;
   color: #fff;
 }
@@ -48,15 +51,6 @@ section {
   gap: 20px;
 }
 
-.fade-in {
-  opacity: 0;
-  transition: 1s ease-in;
-}
-
-.fade-in.hidden {
-  opacity: 1;
-}
-
 .column {
   flex: 0 0 calc(50% - 10px);
   max-width: calc(50% - 10px);
@@ -71,7 +65,7 @@ p:not(.intro p, footer p) {
 header,footer {
   line-height: 60px;
   list-style: none;
-  position: relative;
+
 }
 
 header h1 {
