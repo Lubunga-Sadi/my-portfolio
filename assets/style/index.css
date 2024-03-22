@@ -24,7 +24,7 @@ main, header {
 }
 
 section {
-  padding: 20px 0;
+  padding: 40px 0;
 }
 
 .space-between {
@@ -66,11 +66,7 @@ header {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
+
 
 header li a, footer li a  {
   text-decoration: none;
@@ -99,6 +95,11 @@ section p {
   color: var(--primary-color);
 }
 
+.intro-text {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 h2{
   font-size: 90px;
   line-height: 100px;
@@ -110,34 +111,29 @@ h2:after, h4:after{
   bottom: 0px;
   content: "";
   display: block;
-  width: 50%; 
   border-bottom: 5px solid var(--primary-color);
 }
+
+h2:after {width: 25%;}
+h4:after {width: 50%;}
 
 div h3 {
   font-size: 22px;
   margin-top: 15px;
 }
 
-.skill {
-  width: 100px;
-}
-
 .skill div {
-  padding: 5px 25px;
+  padding: 5px 20px;
   margin-top: 15px;
-  display: inline-block;
+  font-weight: 500;
 }
 
 .html {background-color: #f46036;}
 .css {background-color: #4585e5;}
 .js {background-color: #FA8C45;}
 
-.icons li {
-  font-size: 30px;
-}
 
-h3 {
+h3, h5, .intro p, header li {
   font-size: 30px;
 }
 
@@ -149,6 +145,7 @@ h3 {
   border: 2px solid var(--primary-color);
   background-color: transparent;
   text-decoration: none;
+  font-size: 20px;
 }
 
 .link:hover {background-color: var(--primary-color);}
@@ -160,8 +157,6 @@ h3 {
 
 .picture {
   background: #fff url(../img/profile-pic.jpg)  center  / cover no-repeat ;
-  outline: 2px solid var(--primary-color);
-  outline-offset: -10px;
 }
 
 
@@ -177,7 +172,7 @@ h3 {
   font-size: 20px;
 }
 
-h4, h5 {
+h4 {
   display: inline-block;
   font-size: 40px;
 }
@@ -189,23 +184,57 @@ h4, h5 {
 }
 
 
+/*---PROJECTS---*/
+
+
+.projects a {
+  position: relative;
+  display: block;
+  flex: 0 0 calc(33.333% - 13.333px);
+  max-width: calc(33.333% - 13.333px);
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.05);
+  margin-top: 20px;
+  padding: 30px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.projects a .link-pic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0; /* Initially hide the video */
+  transition: opacity 0.3s ease;
+  transform: scale(1.4);
+}
+
+.projects a:hover .link-pic {
+  opacity: 1; /* Show the video on hover */
+}
+
+.projects li {
+  font-size: 40px;
+  list-style: none;
+}
+
+
+
 /*---CONTACT---*/ 
 
 
-.contact {
+.contact  {
   text-align: center;
 }
 
-h5 {
-  width: 100%;
-  border-bottom: 5px solid var(--primary-color);
-}
-
 .contact p {
-  padding: 20px 80px;
-  width: 100%;
+  margin: 20px 0;
 }
-
 
 /*---FOOTER---*/
 
@@ -264,6 +293,10 @@ footer {
   .contact p {
     padding: 20px 0px;
     font-size: 15px;
+  }
+
+  .link {
+    font-size: 17px;
   }
   
 }
