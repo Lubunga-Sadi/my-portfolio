@@ -27,14 +27,16 @@ contactLink.addEventListener('click', () => {
   contactSection.scrollIntoView({ behavior: 'smooth' });
 })
 
-const boxHover = document.querySelector('.projects a');
-const video = document.querySelector('.projects a .link-pic');
+const projects = document.querySelectorAll('.projects a');
+const videos = document.querySelectorAll('.projects a .link-pic');
 
-boxHover.addEventListener('mouseenter', () => {
-  video.play();
-});
+projects.forEach((box, index) => {
+  box.addEventListener('mouseenter', () => {
+    videos[index].play();
+  });
 
-boxHover.addEventListener('mouseleave', () => {
-  video.pause();
-  video.currentTime = 0;
+  box.addEventListener('mouseleave', () => {
+    videos[index].pause();
+    videos[index].currentTime = 0;
+  });
 });

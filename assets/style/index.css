@@ -204,7 +204,6 @@ h5 {
   padding: 15px;
   color: #fff;
   text-decoration: none;
-  overflow: hidden;
 }
 
 .projects a .link-pic {
@@ -216,7 +215,6 @@ h5 {
   object-fit: cover;
   opacity: 0;
   transition: opacity 0.3s ease;
-  transform: scale(1.4);
 }
 
 .projects a:hover .link-pic {
