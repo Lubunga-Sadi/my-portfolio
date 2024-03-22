@@ -133,7 +133,7 @@ div h3 {
 .js {background-color: #FA8C45;}
 
 
-h3, h5, .intro p, header li {
+h3, .intro p, header li {
   font-size: 30px;
 }
 
@@ -187,16 +187,21 @@ h4 {
 /*---PROJECTS---*/
 
 
+.project-section h4 {
+  margin-bottom: 20px;
+}
+
+h5 {
+  font-size: 25px;
+}
+
 .projects a {
   position: relative;
-  display: block;
-  flex: 0 0 calc(33.333% - 13.333px);
-  max-width: calc(33.333% - 13.333px);
+  flex: 0 0 calc(25% - 15px);
+  max-width: calc(25% - 15px);
   height: 300px;
   background-color: rgba(255, 255, 255, 0.05);
-  margin-top: 20px;
-  padding: 30px;
-  text-align: center;
+  padding: 15px;
   color: #fff;
   text-decoration: none;
   overflow: hidden;
@@ -209,19 +214,16 @@ h4 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0; /* Initially hide the video */
+  opacity: 0;
   transition: opacity 0.3s ease;
   transform: scale(1.4);
 }
 
 .projects a:hover .link-pic {
-  opacity: 1; /* Show the video on hover */
+  opacity: 1;
 }
 
-.projects li {
-  font-size: 40px;
-  list-style: none;
-}
+
 
 
 
@@ -259,7 +261,7 @@ footer {
   
 }
 
-@media (max-width: 768px) {
+@media (max-width: 788px) {
   .column {
     flex: 0 0 100%;
     max-width: 100%;
@@ -282,6 +284,12 @@ footer {
     flex-direction: column-reverse;
   }
 
+  .projects a {
+    flex: 0 0 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+    margin-top: 0px;
+  }
+  
   .contact p {
     padding: 20px 50px;
     width: 100%;
@@ -297,6 +305,11 @@ footer {
 
   .link {
     font-size: 17px;
+  }
+
+  .projects a {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
   
 }
